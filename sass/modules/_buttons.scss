@@ -1,0 +1,25 @@
+.button {
+	max-width: 200px;
+	background: $light;
+	text-align: center;
+	padding: 14px 24px;
+	cursor: pointer;
+	transition: all 0.3s ease-in;
+	a {
+		@include set-links;
+		color: $dark;
+	}
+	&:hover {
+		opacity: 0.7;
+	}
+}
+.button-primary {
+	border-radius: 30px;
+}
+.button-secondary {
+	border-radius: 8px;
+	margin-top: 1em;
+	a {
+		color: $accent;
+	}
+}

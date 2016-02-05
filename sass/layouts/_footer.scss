@@ -1,0 +1,129 @@
+footer {
+	@extend .content-center;
+} 
+.footer {
+	@extend section;
+	background-color: $dark;
+	color: $light;
+	h4 {
+		color: $light;
+		margin-bottom: 1em;
+	}
+	.container > div {
+		margin: 3em auto;
+	}
+	.middle a,
+	.tweet-head {
+		color: $accent;
+	}
+	
+	ul li {
+		vertical-align: middle;
+		line-height: 1em;
+		&.map-marker span {
+			display: inline-block;
+			text-align: left;
+			line-height: 1.5em;
+		}
+	}
+	.fa {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		margin-bottom: -0.9em;
+		background: url('../img/icons.png') no-repeat;
+		margin-right: 1em;
+		&.fa-map-marker {
+			background-position: 0% 30%;
+			margin-bottom: 1.3em;
+		}
+		&.fa-mobile {
+			background-position: 17% 30%;
+		}
+		&.fa-email {
+			background-position: 36% 30%;
+		}
+		&.fa-post {
+			background-position: 55% 30%;
+		}
+		&.fa-image{
+			background-position: 73% 30%;
+		}
+		&.fa-play {
+			background-position: 90% 30%;
+		}
+		&.fa-twitter {
+			background-position: 0% 39%;
+		}
+	}
+	
+	.right li {
+		margin-bottom: 2em;
+		line-height: 1.5em;
+	}
+	.tweet-hash, .tweet-time {
+		color: $light;
+	}
+}
+
+.copyright {
+	padding: 3em 0;
+
+	.social-links {
+		display: block;
+		margin-top: 2em;
+		line-height: 30px;
+		a {
+			display: inline-block;
+			transition: opacity 0.5s ease;
+			&:not(:last-of-type) {
+				margin-right: 0.8em;
+			}
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+		.fa {
+			display: block;
+			position: relative;
+			width: 35px;
+			height: 35px;
+			line-height: 30px;
+			border-radius: 50%;
+			&:before {
+				content: '';
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: url('../img/icons.png') no-repeat;
+			}
+			&.fa-twitter {
+				background-color: $twitter;
+				&:before {
+					background-position: 4.5% 38.75%;
+				}	
+			}
+			&.fa-facebook {
+				background-color: $facebook;
+				&:before {
+					background-position: 22% 38.5%;
+				}	
+			}
+			&.fa-pinterest {
+				background-color: $pinterest;
+				&:before {
+					background-position: 39.4% 38.75%;
+				}	
+			}
+			&.fa-google-plus {
+				background-color: $gplus;
+				&:before {
+					background-position: 56.5% 38.75%;
+				}	
+			}
+		}
+	}
+}

@@ -1,0 +1,75 @@
+ .nav-main {
+ 	position: relative;
+ 	float: right;
+ 	text-align: right;
+ 	ul {
+ 		position: absolute;
+ 		display: block;
+ 		top: 2.3em;
+ 		right: -20em;
+ 		width: 110vw;
+ 		height: 100vh;
+ 		background: $light;
+ 		padding-top: 10%;
+ 		opacity: 0;
+ 		transition: all 0.7s ease;
+ 		li {
+	 		list-style-type: none;
+	 		padding: 15% 2em 0.8em 0;
+	 		border-bottom: 2px solid transparent;
+	 		transition: all 0.6s ease-in;
+	 		a {
+	 			@include set-links;
+	 			transition: all 0.3s ease-in;
+	 		}
+	 		&:hover {
+	 			border-bottom: 2px solid $accent;
+	 			a {
+	 				color: $accent;
+	 			}
+	 		}
+	 	}
+ 	}
+}
+.nav-toggle {
+	cursor: pointer;
+	position: absolute;
+	right: 1.8em;
+	top: 1em;
+	height: 30px;
+	width: 28px;
+	z-index: 2;
+	&:hover > div {
+		opacity: 0.7;
+	}
+}
+.nav-toggle > div {
+	width: 100%;
+	height: 5px;
+	background-color: $dark;
+	margin: 4px auto;
+	transition: all 0.3s ease-in;
+}
+.nav-toggle.on {
+	div {
+		background-color: $accent;
+	}
+	.one {
+		transform: rotate(45deg) translate(5px, 5px);
+	}
+	.two {
+		opacity: 0;
+	}
+	.three {
+		transform: rotate(-45deg) translate(7px, -8px);
+	}
+}
+.nav-toggle.on + .nav-main > ul {
+	right: -2em;
+	opacity: 1;
+	
+	z-index: 50;
+	a {
+		margin-right: 1em;
+	}
+} 

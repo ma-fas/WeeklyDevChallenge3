@@ -1,0 +1,241 @@
+@media screen and (min-width: 660px) {
+	body {
+		font-size: 16px;
+	}
+	.container {
+		width: 80%;
+		max-width: 960px;
+	}
+	section {
+		padding: 5em 0;
+	}
+	header > .container {
+		width: 85%;
+	}
+	.nav-wrapper {
+		line-height: 1.1em;
+	}
+	.logo {
+		width: 30%;
+	}
+	.nav-toggle {
+		display: none;
+	}
+	.nav-main {
+		display: inline-block;
+		float: right;
+		width: 70%;
+		margin-top: 0.5em;
+		ul {
+			display: inline-block;
+			position: relative;
+			right: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 1;
+			background: none;
+			padding: 0;
+			li {
+				display: inline-block;
+				padding: 0 0 0 0;
+				margin-right: 2%;
+				transition: null;
+				&:hover {
+					border-bottom: none;
+				}
+				a {
+					font-size: 1em;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	.jumbotron {
+		.content-center{
+			width: 50%;
+			padding: 9em 0 3em 0;
+			p {
+				margin: 1.5em 0 2.5em 0;
+			}
+		}
+	}
+	.service-wrap {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		.unit {
+			width: 30%;
+		}
+	}
+
+	
+	#project {
+		background-size: 50% 60%;
+		&:before {
+			background-color: transparent;
+		}
+		.content-left {
+			width: 60%;
+			margin: 2% 0 0 0;
+		}
+		.project-unit {
+			min-height: 90px;
+		}
+	}
+
+	.culture-wrap .unit:not(:last-of-type){
+			&:after {
+				display: block;
+			}
+	}
+	.client-wrap {
+		max-width: 600px;
+		.client-unit {
+			img{
+				width: 20%;
+			}
+			blockquote {
+				margin-top: 1%;
+				line-height: 1.8em;
+				:after {
+					border-bottom-color: transparent;
+				}
+			}
+			&:first-of-type{
+				img {
+					float: left;
+				}
+				blockquote {
+					float: right;
+					&:after {
+						right: 100%;
+						top: 50%;
+						border: solid transparent;
+						content: " ";
+						height: 0;
+						width: 0;
+						position: absolute;
+						pointer-events: none;
+						border-color: rgba(249, 249, 249, 0);
+						border-right-color: #F9F9F9;
+						border-width: 15px;
+						margin-top: -15px;
+					}
+				}
+			}
+			&:last-of-type{
+				img {
+					float: right;
+				}
+				blockquote {
+					float: left;
+					&:after {
+						left: 100%;
+						top: 50%;
+						border: solid transparent;
+						content: " ";
+						height: 0;
+						width: 0;
+						position: absolute;
+						pointer-events: none;
+						border-color: rgba(249, 249, 249, 0);
+						border-left-color: #F9F9F9;
+						border-width: 15px;
+						margin-top: -15px;
+					}
+				}
+			}
+		}
+	}	
+	#credentials .container{
+		display: flex;
+		justify-content: space-between;
+		a:first-of-type {
+				margin-top: 0.5em;
+			}
+		img {
+			margin: 0;
+		}
+	}
+}
+
+@media screen and (min-width: 720px) {
+	.relax-right {
+		float: right;
+		width: 70%;
+		padding: 4em 0;
+		.content-left {
+			margin-left: 10%;
+		}
+	}
+
+}
+
+@media screen and (min-width: 992px) {
+	header > .container {
+		width: 80%;
+		max-width: 960px;
+	}
+	.service-wrap .unit {
+		width: 31%;
+	}
+	#project .content-left {
+		width: 50%;
+	} 
+	.client-wrap {
+		width: 75%;
+		.client-unit {
+			img {
+				width: 50%;
+			}
+			blockquote {
+				margin-top: 4%;
+				line-height: 1.8em;
+				padding: 1.5em;
+			}
+		}
+	}
+
+	.footer {
+		.container {
+			div {
+				float: left;
+				width: 28%;
+				margin: 0 auto;
+				text-align: left;
+				&:not(:first-of-type) {
+					width: 33%;
+					margin-left: 1%;
+				}
+				h4 {
+					margin-left: 3.5em;
+				}
+				.fa-twitter {
+					margin-left: -2em;
+					float: left;
+				}
+				.tweet-hash,
+				.tweet-time {
+					margin-left: 2.5em;
+				}
+			}
+		}
+	}
+
+	.copyright {
+			display: block;
+			vertical-align: middle;
+			line-height: 35px;
+			padding: 2em 0;
+		.copy {
+			float: left;
+			width: 33%;
+		}
+		.social-links {
+			margin-top: 0;
+			float: left;
+			width: 33%;
+		}
+	}
+}

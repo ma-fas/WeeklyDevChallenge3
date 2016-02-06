@@ -12,11 +12,15 @@ footer {
 	.container > div {
 		margin: 3em auto;
 	}
-	.middle a,
+	
 	.tweet-head {
+		color: $light;
+		transition: all 0.5s ease;
+	}
+	.middle a:hover,
+	.tweet-head:hover {
 		color: $accent;
 	}
-	
 	ul li {
 		vertical-align: middle;
 		line-height: 1em;
@@ -80,7 +84,10 @@ footer {
 				margin-right: 0.8em;
 			}
 			&:hover {
-				opacity: 0.7;
+				.fa-twitter {background-color: $twitter;}
+				.fa-facebook {background-color: $facebook;}
+				.fa-pinterest {background-color: $pinterest;}
+				.fa-google-plus {background-color: $gplus;}
 			}
 		}
 		.fa {
@@ -90,6 +97,8 @@ footer {
 			height: 35px;
 			line-height: 30px;
 			border-radius: 50%;
+			background-color: $dark;
+			transition: all 0.5s ease;
 			&:before {
 				content: '';
 				position: absolute;
@@ -100,29 +109,18 @@ footer {
 				height: 100%;
 				background: url('../img/icons.png') no-repeat;
 			}
-			&.fa-twitter {
-				background-color: $twitter;
-				&:before {
-					background-position: 4.5% 38.75%;
-				}	
+			&.fa-twitter:before {
+				background-position: 4.5% 38.75%;
+			}	
+
+			&.fa-facebook:before {
+				background-position: 22% 38.5%;
 			}
-			&.fa-facebook {
-				background-color: $facebook;
-				&:before {
-					background-position: 22% 38.5%;
-				}	
+			&.fa-pinterest:before {
+				background-position: 39.4% 38.75%;
 			}
-			&.fa-pinterest {
-				background-color: $pinterest;
-				&:before {
-					background-position: 39.4% 38.75%;
-				}	
-			}
-			&.fa-google-plus {
-				background-color: $gplus;
-				&:before {
-					background-position: 56.5% 38.75%;
-				}	
+			&.fa-google-plus:before {
+				background-position: 56.5% 38.75%;
 			}
 		}
 	}
